@@ -1,0 +1,20 @@
+import requests
+import os
+import bs4
+
+url = "https://example.com"  # replace with the URL of the website
+response = requests.get(url)
+soup = bs4.BeautifulSoup(response.text, "html.parser")
+
+# Find all image tags
+img_tags = soup.find_all("img")
+
+# Extract image URLs from the image tags
+urls = [img["src"] for img in img_tags]
+
+# Download each image
+for url in urls:
+    response = requests.get(url)
+    with open(os.path.join("images", os.path.basename(url)), "wb") as f:
+        f.write(response.content)
+
