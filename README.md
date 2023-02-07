@@ -1,6 +1,6 @@
 # Url-Image-downloader
-Python script that will download every image from a website using the requests and BeautifulSoup libraries:
+Python script that will download every image from a website
 
-This script uses the requests library to make an HTTP GET request to the specified URL, and the BeautifulSoup library to parse the HTML content of the response. The script then finds all img elements in the HTML and extracts their src attributes. Finally, it makes another GET request to each image's URL and saves the image content to a local file.
+This algorithm uses the requests library to retrieve the HTML content of the website, and the bs4 (Beautiful Soup) library to parse the HTML and extract the URLs of all the images on the page. It then downloads each image and saves it to a local directory named images.
 
-Note that this script assumes that all images are in JPEG format, and that the URLs in the src attributes are absolute. If the images are in a different format or if the URLs are relative, you'll need to modify the script accordingly. Also note that downloading images from a website without permission is illegal and unethical, so you should only use this script on websites that allow image scraping.
+Please note that before using this algorithm, you should be aware of the copyright and intellectual property laws in your jurisdiction, as well as the terms of service of the website you're downloading images from. Some websites may prohibit or limit the use of automated scraping tools, and downloading images without permission from the owner can result in legal penalties.
